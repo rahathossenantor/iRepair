@@ -10,7 +10,7 @@ const intro = {
         transition: {
             duration: 0.5,
             staggerChildren: 0.25,
-            delayChildren: 0.5
+            delayChildren: 1
         }
     }
 };
@@ -29,7 +29,7 @@ const introChildren = {
 
 const Hero = () => {
     return (
-        <div className="custom-container h-[calc(100vh-110px)] grid grid-cols-1 lg:grid-cols-2 place-items-center my-5">
+        <div className="custom-container grid grid-cols-1 lg:grid-cols-2 place-items-center py-20 pt-40 my-5">
             <motion.div
                 variants={intro}
                 initial="hidden"
@@ -53,21 +53,28 @@ const Hero = () => {
                 </motion.div>
             </motion.div>
             <motion.div
-            className="w-3/4 lg:w-full mx-auto"
-            initial={{
-                y: 0
-            }}
-            animate={{
-                y: 20,
-                transition: {
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    duration: 2,
-                    ease: "easeInOut"
-                }
-            }}
+                className="w-3/4 lg:w-full mx-auto"
+                initial={{
+                    y: 0,
+                    rotate: 0,
+                    scale: 5
+                }}
+                animate={{
+                    y: 20,
+                    rotate: -30,
+                    scale: 1,
+                    transition: {
+                        duration: 1,
+                        y: {
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            duration: 2,
+                            ease: "easeInOut"
+                        }
+                    }
+                }}
             >
-                <img src={macbookExposed} className="-rotate-[35deg] object-contain" alt="MacBook Exposed" />
+                <img src={macbookExposed} className="object-contain" alt="MacBook Exposed" />
             </motion.div>
         </div>
     );
