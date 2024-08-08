@@ -2,7 +2,7 @@ import MainLayout from "./components/ui/layouts/MainLayout";
 
 const App = () => {
   return (
-    <div className="overflow-hidden h-[1000px]">
+    <div className="overflow-hidden">
       <MainLayout />
     </div>
   );

@@ -74,6 +74,9 @@
   html {
     font-family: "Poppins", sans-serif;
   }
+  h1 {
+    @apply text-6xl font-semibold;
+  }
 }
 
 @layer components {
