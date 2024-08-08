@@ -83,4 +83,7 @@
   .custom-container {
     @apply w-full max-w-[1230px] px-[20px] mx-auto;
   }
+  .dashboard-navigator {
+    @apply p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all flex items-center gap-1;
+  }
 }
