@@ -1,9 +1,10 @@
-import Counter from "@/components/ui/Counter";
+import Todos from "@/components/ui/Todos";
 
 const Home = () => {
     return (
         <div className="custom-container">
-            <Counter />
+            {/* <Counter /> */}
+            <Todos />
         </div>
     );
 };
