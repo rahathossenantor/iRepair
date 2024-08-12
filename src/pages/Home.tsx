@@ -1,11 +1,9 @@
-import Hero from "@/components/ui/layouts/sections/Hero";
-import Services from "@/components/ui/layouts/sections/Services";
+import Counter from "@/components/ui/Counter";
 
 const Home = () => {
     return (
-        <div>
-            <Hero />
-            <Services />
+        <div className="custom-container">
+            <Counter />
         </div>
     );
 };

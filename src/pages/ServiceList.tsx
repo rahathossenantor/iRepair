@@ -12,6 +12,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 
+type TService = {
+    _id: string;
+    id?: string;
+    name: string;
+    description: string;
+    price: string;
+};
+
 const ServiceList = () => {
     const { isLoading, isError, error, data: services } = useQuery({
         queryKey: ["services"],
@@ -35,14 +43,6 @@ const ServiceList = () => {
     if (isError) {
         return <h1>{error.message}</h1>
     }
-
-    type TService = {
-        _id: string;
-        id?: string;
-        name: string;
-        description: string;
-        price: string;
-    };
 
     return (
         <Table className="border rounded-xl">
